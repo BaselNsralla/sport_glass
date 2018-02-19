@@ -1,5 +1,5 @@
 {
-  "name": "sport_fall",
+  "name": "sport_glass",
   "type": "project:application",
   "bundler": {
     "id": "cli",
@@ -63,16 +63,6 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
-          "velocity-animate",
-          "tether",
-          {
-            "name": "aurelia-bootstrap",
-            "path": "../node_modules/aurelia-bootstrap/dist/amd",
-            "main": "index",
-            "resources": [
-              "**/*.html"
-            ]
-          },
           {
             "name": "aurelia-templating-resources",
             "path": "../node_modules/aurelia-templating-resources/dist/amd",
@@ -128,8 +118,8 @@
     "source": "src/**/*.js"
   },
   "markupProcessor": {
-    "id": "minimum",
-    "displayName": "Minimal Minification",
+    "id": "none",
+    "displayName": "None",
     "fileExtension": ".html",
     "source": "src/**/*.html"
   },
@@ -140,13 +130,12 @@
     "source": "src/**/*.css"
   },
   "editor": {
-    "id": "vscode",
-    "displayName": "Visual Studio Code"
+    "id": "none",
+    "displayName": "None"
   },
   "unitTestRunner": {
-    "id": "karma",
-    "displayName": "Karma",
-    "source": "test/unit/**/*.js"
+    "id": "none",
+    "displayName": "None"
   },
   "paths": {
     "root": "src",
@@ -155,9 +144,5 @@
     "attributes": "resources/attributes",
     "valueConverters": "resources/value-converters",
     "bindingBehaviors": "resources/binding-behaviors"
-  },
-  "testFramework": {
-    "id": "jasmine",
-    "displayName": "Jasmine"
   }
 }

@@ -1,5 +1,5 @@
 export class App {
   constructor() {
-    this.message = 'Sport Glass'
+    this.message = 'Hello World!';
   }
 }

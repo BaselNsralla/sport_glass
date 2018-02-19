@@ -3,10 +3,6 @@ import environment from './environment';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .feature('resources')
-    .standardConfiguration()
-    .developmentLogging()
-    .plugin('aurelia-bootstrap')
     .feature('resources');
 
   if (environment.debug) {
@@ -19,4 +15,3 @@ export function configure(aurelia) {
 
   aurelia.start().then(() => aurelia.setRoot());
 }
-
