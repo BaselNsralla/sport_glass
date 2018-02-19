@@ -1,0 +1,14 @@
+
+.menu {
+  background-color: black;
+  list-style: none;
+}
+
+.menu-item {
+  padding: 10px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+}
