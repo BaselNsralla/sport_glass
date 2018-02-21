@@ -1,11 +1,11 @@
 
 .menu {
-  background-color: black;
+  background-color:#A39A92;
   list-style: none;
 }
 
 .menu-item {
-  padding: 10px;
+  padding: 5px;
 }
 
 .menu-link {
