@@ -1,0 +1,8 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>
+  <div class="sidebar-navbar submenu">
+    <ul class="nav navbar-nav">
+      <li repeat.for="tab of tabs"><a href="#">${tab.name}</a></li>
+    </ul>
+  </div>  
+</template>

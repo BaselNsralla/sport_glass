@@ -1,9 +1,15 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>
-  <div class="row menu-holder">
+   <div class="row menu-holder">
     <ul class="col col-xl-8 menu">
       <div class='row'>
-        <li class='col col-sm-2 menu-item' repeat.for="tab of tabs"><a class='menu-link' href="#">${tab}</a></li>
+        <li class='col col-sm-2 menu-item' repeat.for="tab of tabs"><a class='menu-link' href="#">${tab.name}</a>
+          <compose 
+          model.bind = "tab"
+          view-model = "../submenu/submenu"
+          view       = "../submenu/submenu.html"
+          ></compose>
+        </li>
       </div>
     </ul>
   </div>

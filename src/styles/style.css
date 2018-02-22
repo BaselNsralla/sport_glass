@@ -6,9 +6,21 @@
 
 .menu-item {
   padding: 5px;
+  position: relative
 }
+
+
 
 .menu-link {
   color: white;
   text-decoration: none;
+}
+
+.submenu {
+  position: absolute;
+  display: none
+}
+
+.menu-item:hover .submenu {
+  display: block;
 }
