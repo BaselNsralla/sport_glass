@@ -7,6 +7,7 @@
   background-color:#253237;
   list-style: none;
   height: 35px;
+  margin-bottom: 3px
 }
 
 .menu-item-col {
@@ -68,4 +69,39 @@ li > a:hover {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
+}
+
+.end-justify-child {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+}
+
+.start-justify-child {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.end-justify-self {
+  display: flex;
+  align-self: flex-end;
+}
+
+
+.header {
+  background-color: #253237;
+  
+}
+
+.logo-image {
+  height:110px;
+  width: 140px;
+}
+.small-icon {
+  width: 40px;
+  height: 40px
+}
+.bottom-spaced{
+  margin-bottom: 5px
 }

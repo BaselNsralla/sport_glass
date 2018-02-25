@@ -1,10 +1,23 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>
   <div class='container'>
-    <compose 
-      view-model="./components/nav/nav" 
-      model.bind="selected"
-      view="./components/nav/nav.html"
-    ></compose>
+    <div class="row header end-align-child">
+      <div class="col-lg-2 bottom-spaced">
+        <a class="hometaker" href="#">
+          <img class="logo-image" src="src/assets/shark-logo2.png" />
+        </a>
+      </div>
+      <div class="col-lg-4"> 
+        <compose 
+        view-model="./components/nav/nav" 
+        model.bind="selected"
+        view="./components/nav/nav.html"
+        ></compose>
+      </div>
+      <div class="col-lg-5"></div>
+      <div class="col-lg-1 bottom-spaced end-justify-self">
+        <img class="small-icon" src="src/assets/shopping-bag2.png">
+      </div>
+    </div>
   </div>
 </template>
