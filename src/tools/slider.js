@@ -6,9 +6,9 @@ class Slider {
 
   init () {
     this.current = 0
-    this.sheets = $(`${this.wrapper}`).children('div')
-    console.log(this.sheets)
-    setInterval(()=>this.setActive((this.current+1)%this.sheets.length), 2000)
+    this.sheets = $(`${this.wrapper}`).children('div').hide()
+    $(this.sheets[this.current]).show()
+    setInterval(()=>this.setActive((this.current+1)%this.sheets.length), 4000)
   }
 
   getPotato () {
@@ -20,9 +20,9 @@ class Slider {
     this.current = (this.current + 1)%this.sheets.length
     this.sheets.map((i, element) => {
       if (index === i ) {
-        $(this.sheets[i]).hide()
-      } else {
         $(this.sheets[i]).show()
+      } else {
+        $(this.sheets[i]).hide()
       }
     })
   }
