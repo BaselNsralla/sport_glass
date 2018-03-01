@@ -64,7 +64,6 @@
           "aurelia-templating",
           "aurelia-templating-binding",
           "jquery",
-          "jquery",
           {
             "name": "bootstrap",
             "path": "../node_modules/bootstrap/dist",
