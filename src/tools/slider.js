@@ -2,7 +2,7 @@
 var $  = require('jquery')
 class Slider {
   constructor(wrapper, start = 0) {
-    this.current = start 
+    this.next = start + 1
     this.wrapper = wrapper
     this.tints = []
   }
@@ -16,13 +16,10 @@ class Slider {
     $('.slider').append(this.sheets)
     $('.slider').css('height',$(`${this.wrapper}`).css('height'))
     this.createTints(this.sheets.length)
-    $(this.sheets[this.current]).show()
-    this.blurInactiveTint(this.current)
-    setInterval(()=>this.setActive((this.current+1)%this.sheets.length), 4000)
-  }
-
-  getPotato () {
-    console.log('rere')
+    $('.tint').click(this.forceSlideChange.bind(this))
+    $(this.sheets[this.next-1]).show()
+    this.blurInactiveTint(this.next-1)
+    setInterval(()=>this.setActive((this.next)%this.sheets.length), 4000)
   }
 
   createTints(count) {
@@ -31,6 +28,7 @@ class Slider {
     for(var i = 0; i < count; i++) {
       let tint =  document.createElement('div')
       tint.className = 'tint'
+      tint.setAttribute("index", i)
       this.tints[i] = tint
       tintFather.appendChild(tint)
     }
@@ -38,9 +36,16 @@ class Slider {
     this.buildCSS()    
   }
 
+  forceSlideChange(e) {
+      let n = e.currentTarget.getAttribute('index')%this.sheets.length
+      if(this.next - 1 !== n) {
+        this.next = n
+        this.setActive(this.next)
+      }
+  }
+
   setActive(index) {
     console.log(index)
-    this.current = (this.current + 1)%this.sheets.length
     this.blurInactiveTint(index)
     this.sheets.map((i, element) => {
       if (index === i ) {
@@ -49,6 +54,7 @@ class Slider {
         $(this.sheets[i]).slideUp()
       }
     })
+    this.next = (this.next + 1)%this.sheets.length
   }
 
   blurInactiveTint(index) {
