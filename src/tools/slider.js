@@ -19,9 +19,19 @@ class Slider {
     $('.tint').click(this.forceSlideChange.bind(this))
     $(this.sheets[this.next-1]).show()
     this.blurInactiveTint(this.next-1)
-    setInterval(()=>this.setActive((this.next)%this.sheets.length), 4000)
+    this.restartShow()
   }
 
+  restartShow() {
+    if (this.interval) {
+      clearInterval(this.interval)
+    }
+    if (this.timeout) {
+      clearTimeout(this.timeout)
+    }
+    this.interval = setInterval(()=>this.setActive((this.next)%this.sheets.length), 4000)
+  }
+  
   createTints(count) {
     let tintFather = document.createElement('div')
     tintFather.className = 'tint-container'
@@ -39,21 +49,20 @@ class Slider {
   forceSlideChange(e) {
       let n = e.currentTarget.getAttribute('index')%this.sheets.length
       if(this.next - 1 !== n) {
+        this.restartShow()
         this.next = n
         this.setActive(this.next)
       }
   }
 
   setActive(index) {
-    console.log(index)
     this.blurInactiveTint(index)
     this.sheets.map((i, element) => {
-      if (index === i ) {
-        setTimeout(() => $(this.sheets[i]).slideDown(), 300)
-      } else {
+      //if (index !== i ) {
         $(this.sheets[i]).slideUp()
-      }
+      //}
     })
+    this.timeout = setTimeout(()=>$(this.sheets[index]).slideDown(),300)
     this.next = (this.next + 1)%this.sheets.length
   }
 
