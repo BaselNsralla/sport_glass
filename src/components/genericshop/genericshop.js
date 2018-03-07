@@ -7,12 +7,16 @@ export class GenericShop {
     //   }
     // }
     this.items = [
-                  [ {notch: 'Title1', image:'scarf.jpg'}, 
-                    {notch: 'Title1', image:'scarf.jpg'},  
-                    {notch: 'Title1', image:'scarf.jpg'} ],
-                  [ {notch: 'Title1', image:'scarf.jpg'},
-                    {notch: 'Title1', image:'scarf.jpg'}, 
-                    {notch: 'Title1', image:'scarf.jpg'} ]
+                   {notch: 'Title1', image:'scarf.jpg'}, 
+                   {notch: 'Title1', image:'scarf.jpg'},  
+                   {notch: 'Title1', image:'scarf.jpg'},
+                   {notch: 'Title1', image:'scarf.jpg'},
+                   {notch: 'Title1', image:'scarf.jpg'}, 
+                   {notch: 'Title1', image:'scarf.jpg'},
+                   {notch: 'Title1', image:'scarf.jpg'},
+                   {notch: 'Title1', image:'scarf.jpg'},
+                   {notch: 'Title1', image:'scarf.jpg'}, 
+                   {notch: 'Title1', image:'scarf.jpg'}
                  ]
   }
 
