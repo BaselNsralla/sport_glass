@@ -85,6 +85,11 @@
             "main": "aurelia-templating-router"
           },
           {
+            "name": "aurelia-configuration",
+            "path": "../node_modules/aurelia-configuration/dist/commonjs",
+            "main": "index"
+          },
+          {
             "name": "aurelia-testing",
             "path": "../node_modules/aurelia-testing/dist/amd",
             "main": "aurelia-testing",
@@ -105,7 +110,7 @@
             ".html",
             ".css"
           ],
-          "stub": true
+          "stub": false
         }
       ]
     }

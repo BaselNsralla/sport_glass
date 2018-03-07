@@ -1,0 +1,19 @@
+<template>
+  <require from="bootstrap/css/bootstrap.css"></require>   
+  <div class="container">
+    <compose view="../header.html"></compose>
+    <div class="row">
+      <div class="col col-lg-4"></div>
+      <div class="col col-lg-8">
+        <div class="row" repeat.for="item of items">
+          <div class="col col-lg-4" repeat.for="i of item">
+            <div class="notch">${i.notch}</div>
+            <div class="item-body">
+              <img class="item-image" src="/src/assets/${i.image}">  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
