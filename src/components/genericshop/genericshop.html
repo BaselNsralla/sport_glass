@@ -1,6 +1,6 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>   
-  <div class="container">
+  <div class="container container-pro">
     <compose view="../header.html"></compose>
     <div class="row">
       <div class="col col-xs-2 filter-menu"></div>
@@ -10,6 +10,11 @@
             <div class="notch">${i.notch}</div>
             <div class="item-body">
               <img class="item-image" src="/src/assets/${i.image}">  
+            </div>
+            <div class="item-footer">
+              <p>${i.price}</p>
+              <Button type="button" class="btn-success" id="buy-button">Buy</Button>
+              <Button type="button" class="btn-primary" id="buy-">+</Button>
             </div>
           </div>
         </div>
