@@ -41,7 +41,6 @@ export class GenericShop {
     }
   }
 
-
   reanimate(headerClass) {
     var elm = document.getElementsByClassName('header')[0]
     elm.classList.remove('smooth-show')
@@ -50,8 +49,6 @@ export class GenericShop {
     elm.parentNode.replaceChild(newone, elm);
   }
 
-
-
   removeClassIfNeeded(owner ,shown, hidden) {
     if (this.hiddenHeader){
       $(owner).removeClass(hidden)
@@ -59,7 +56,6 @@ export class GenericShop {
       $(owner).removeClass(shown)
     }
   }
-
 
   attached() {
     var lastScroll = 0
@@ -76,5 +72,4 @@ export class GenericShop {
       lastScroll = _scroll
     });
   }
-
 }
