@@ -93,8 +93,17 @@ li > a:hover {
 
 .header {
   background-color: #253237;
-  
+  transition: transform 900ms ease-in-out
 }
+
+.smooth-hide {
+  /*display: 'inline-block';*/
+  transform: translate(0px, -200px)
+}
+.smooth-show {
+  transform: none
+}
+
 
 .logo-image {
   height:110px;
@@ -169,7 +178,9 @@ li > a:hover {
   margin: 5px
 }
 
+.hide-animation {
 
+}
 
 
 /* 
