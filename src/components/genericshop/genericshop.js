@@ -24,11 +24,11 @@ export class GenericShop {
   smoothlyHide(headerClass, cb) {
     if (this.hiddenHeader == false){
       this.reanimate(headerClass)
-      this.hiddenHeader = true
-      setTimeout(() => {
+      
+      this.hideHeaderTimeout = setTimeout(() => {
         $(headerClass).addClass('smooth-hide')
-        cb()
-      }, 1000)
+        this.hiddenHeader = true
+      }, 2000)
     }
   }
 
@@ -41,14 +41,6 @@ export class GenericShop {
     }
   }
 
-  // reanimate(headerClass) {
-  //     var el = $(headerClass)
-  //     el.removeClass('smooth-show')
-  //     el.removeClass('smooth-hide')  
-  //     var newone = el.clone(true);
-  //     el.before(newone);
-  //     $("." + el.attr("class")).remove();
-  // }
 
   reanimate(headerClass) {
     var elm = document.getElementsByClassName('header')[0]
@@ -73,23 +65,16 @@ export class GenericShop {
     var lastScroll = 0
     var fixed = false
     $(window).scroll((event) => {
-      var _scroll = $(window).scrollTop();
-      
-      //this.removeClassIfNeeded('.header','smooth-show', 'smooth-hide')
+      var _scroll = $(window).scrollTop()
+      clearTimeout(this.hideHeaderTimeout)
       if(lastScroll < _scroll && _scroll > 120) {
-        //this.removeClassIfNeeded('.header','smooth-show', 'smooth-hide')
         this.smoothlyHide('.header', ()=> {})
       }
-
       if(lastScroll > _scroll) {
-        //this.removeClassIfNeeded('.header','smooth-show', 'smooth-hide')
-        //$('.header').addClass('sticky-top')
         this.smoothleyShow('.header', ()=> {})
       }
-
       lastScroll = _scroll
     });
-    
   }
 
 }

@@ -101,7 +101,7 @@ li > a:hover {
   transform: translate(0px, -200px)
 }
 .smooth-show {
-  transform: none
+  transform: translate(0px, 0px)
 }
 
 
