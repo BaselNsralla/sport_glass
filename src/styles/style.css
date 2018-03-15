@@ -158,9 +158,18 @@ li > a:hover {
   }
   .item{
     max-width: 50%;
-    height: 300px;
   }
 }
+
+@media (max-width: 450px) {
+  .item {
+        height: 300px;
+        margin-bottom: 30px
+  }
+
+}
+
+
 
  #s1 {background-color: grey}
  #s2 {background-color: blue}

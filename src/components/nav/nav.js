@@ -1,19 +1,19 @@
 export class Nav {
   constructor () {
-     this.tabs = [{name: 'Man', submenu: [
-                                            {name: 'Helemts', path: 'man/pants'},
-                                            {name: 'Akzx', path: 'man/shirts'},
-                                            {name: 'Ipsum', path: 'man/zalliff'}
+     this.tabs = [{name: 'Men', submenu: [
+                                            {name: 'Helemts', route:'shop', param: 'men'},
+                                            {name: 'Akzx', route:'shop', param: 'shirts'},
+                                            {name: 'Ipsum', route:'shop', param: 'zalliff'}
                                          ]}, 
-                  {name: 'Woman', submenu: [ 
-                                            {name: 'Porta', path: 'man/pants'},
-                                            {name: 'Well', path: 'man/shirts'},
-                                            {name: 'Find', path: 'man/zalliff'}
+                  {name: 'Women', submenu: [ 
+                                            {name: 'Porta', route:'shop', param: 'pants'},
+                                            {name: 'Well', route:'shop', param: 'shirts'},
+                                            {name: 'Find', route:'shop', param: 'zalliff'}
                                            ]},
                   {name: 'Kids', submenu: [
-                                            {name: 'Pants', path: 'man/pants'},
-                                            {name: 'Shirts', path: 'man/shirts'},
-                                            {name: 'Zalcon', path: 'man/zalliff'}
+                                            {name: 'Pants', route:'shop', param: 'pants'},
+                                            {name: 'Shirts', route:'shop', param: 'shirts'},
+                                            {name: 'Zalcon', route:'shop', param: 'alliff'}
                                           ]}]
   }
 

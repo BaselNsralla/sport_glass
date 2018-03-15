@@ -2,7 +2,10 @@
   <require from="bootstrap/css/bootstrap.css"></require>
   <div class="sidebar-navbar submenu">
     <ul class="nav navbar-nav">
-      <li class="sub-menu-item" repeat.for="tab of tabs"><a class='sub-menu-item-link' href="#">${tab.name}</a></li>
+      <li class="sub-menu-item" repeat.for="tab of tabs">
+      	<a 
+				route-href='route: shop; params.bind: {gender: tab.param}'
+      	class='sub-menu-item-link'> ${tab.name} </a></li>
     </ul>
   </div>  
 </template>

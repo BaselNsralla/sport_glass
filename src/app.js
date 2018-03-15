@@ -9,7 +9,7 @@ export class App {
     config.title = 'Home'
     config.map([
       { route: ['/shop/:gender', 'home/shop/:gender'], 
-        name:  'sellMain',  
+        name:  'shop',  
         moduleId: './components/genericshop/genericshop',   
         title: 'Shop',
       },

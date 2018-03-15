@@ -4,16 +4,16 @@ export class GenericShop {
   constructor () {
     this.hiddenHeader = false
     this.items = [
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR},
-                   {notch: 'Title1', image:'scarf.jpg', price:'43'+_CUR}
+                   {notch: 'Title1', id:'1', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'12', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'13', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'4', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'5', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'67', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'8', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'3', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'99', image:'scarf.jpg', price:'43'+_CUR},
+                   {notch: 'Title1', id:'234', image:'scarf.jpg', price:'43'+_CUR}
                  ]
   }
 
