@@ -1,16 +1,48 @@
 <template>
 	<compose view="../header.html"></compose>
-	<div class='row'>
+	<div class='row top-buffer'>
 		<div class='col-md-7 big-image'>
-			<img src=${details.images[1]} >
+			<img class='give-me-shadow priduct-details-image' src=${details.images[2]} >
 		</div>
-		<div class='col-md-5 big-image'>
+		<div class='col-md-5'>
 				<div class="row">
-					<div class="col-md-12">
-						<p class="category-details-Text"></p>
-
+					<div class="col-md-12 direction-column give-me-shadow border-radius padding">
+						<span class="details-category-text">${i18n.tr(details.category)}</span>
+						<span class="font-weight-bold details-product-text">${i18n.tr(details.title)}</span>
+						<span class="font-weight-light">${i18n.tr(details.price)}</span>
 					</div>
+					<hr class="horizon-classic" size="30">
+					<div class="col-md-12">
+						<div class="row">
+						  <div class="col-md-8">
+							  <div class="dropdown py-2">
+							    <button class="btn-classic btn dropdown-toggle full-width" type="button" data-toggle="dropdown">${i18n.tr("size")}
+							    <span class="caret"></span></button>
+							    <ul class="dropdown-menu black-text-list">
+							      <li><a href="#">${i18n.tr("html")}</a></li>
+							      <li><a href="#">${i18n.tr("CSS")}</a></li>
+							      <li><a href="#">${i18n.tr("JS")}</a></li>
+							    </ul>
+							  </div>
+						  </div>
+						  <div class="col-md-4">
+							  <div class="dropdown py-2">
+							    <button class="btn-classic btn dropdown-toggle full-width" type="button" data-toggle="dropdown">${i18n.tr("amount")}
+							    <span class="caret"></span></button>
+							    <ul class="dropdown-menu black-text-list">
+							      <li><a href="#">${i18n.tr("html")}</a></li>
+							      <li><a href="#">${i18n.tr("CSS")}</a></li>
+							      <li><a href="#">${i18n.tr("JS")}</a></li>
+							    </ul>
+							  </div>
+						  </div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 top-buffer">
+								<button class="btn btn-primary full-width">${i18n.tr("add-to-chart")}</button>
+							</div>
+						</div>
 				</div>
-		</div>
+		  </div>
 	</div>
 </template>

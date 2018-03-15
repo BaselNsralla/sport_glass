@@ -1,7 +1,12 @@
+import {I18N} from 'aurelia-i18n';
+import {inject} from 'aurelia-framework';
+
+@inject(I18N)
 export class App {
-  
-  constructor() {
+  constructor(I18N) {
+    this.i18n = I18N
     this.message = 'Hello World!';
+    this.i18n.setLocale('se')
   }
 
   configureRouter(config, router) {

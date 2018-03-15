@@ -67,12 +67,13 @@
           {
             "name": "bootstrap",
             "path": "../node_modules/bootstrap/dist",
-            "main": "js/bootstrap.min",
+            "main": "js/bootstrap.bundle.min",
             "deps": ["jquery"],
             "exports": "$",
             "resources": [
               "css/bootstrap.css"
-            ]
+            ],
+            "exports": "$"
           },
           {
             "name": "aurelia-templating-resources",
@@ -95,6 +96,22 @@
             "main": "aurelia-testing",
             "env": "dev"
           },
+          {
+            "name": "i18next",
+            "path": "../node_modules/i18next/dist/umd",
+            "main": "i18next"
+          },
+          {
+            "name": "aurelia-i18n",
+            "path": "../node_modules/aurelia-i18n/dist/amd",
+            "main": "aurelia-i18n"
+          },
+          {
+            "name": "i18next-xhr-backend",
+            "path": "../node_modules/i18next-xhr-backend/dist/umd",
+            "main": "i18nextXHRBackend"
+          },
+          
           "text"
         ]
       }
