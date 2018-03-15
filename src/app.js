@@ -19,6 +19,12 @@ export class App {
         moduleId: './components/home/home',  
         nav: true,  
         title: 'Home' 
+      },
+      {
+        route: ['/shop/item/:id'],
+        name: 'item-details',
+        moduleId: './components/item-details/item-details',
+        title: 'Item'
       }
     ])
   }

@@ -1,6 +1,5 @@
 <template>
   <require from="bootstrap/css/bootstrap.css"></require>   
-  <div class="container container-pro">
     <compose view="../header.html"></compose>
     <div class="row">
       <div class="col col-xs-2 filter-menu"></div>
@@ -9,7 +8,7 @@
           <div class="col-md-4 item" repeat.for="i of items">
             <div class="notch">${i.notch}</div>
             <div class="item-body">
-              <img class="item-image" src="/src/assets/${i.image}">  
+              <a route-href="route: item-details; params.bind:{id: i.id}"> <img class="item-image" src="/src/assets/${i.image}"> </a> 
             </div>
             <div class="item-footer">
               <p>${i.price}</p>
@@ -20,5 +19,4 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
