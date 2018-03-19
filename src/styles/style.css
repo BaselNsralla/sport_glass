@@ -53,6 +53,11 @@
 }
 /* ------- END UTIL CLASSES ------*/
 
+select {
+  height: 38px;
+  width: 100%;
+}
+
 
 .horizon-classic {
   height: 0.5px;

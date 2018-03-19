@@ -15,31 +15,25 @@
 					<div class="col-md-12">
 						<div class="row">
 						  <div class="col-md-8">
-							  <div class="dropdown py-2">
-							    <button class="btn-classic btn dropdown-toggle full-width" type="button" data-toggle="dropdown">${i18n.tr("size")}
-							    <span class="caret"></span></button>
-							    <ul class="dropdown-menu black-text-list">
-							      <li><a href="#">${i18n.tr("html")}</a></li>
-							      <li><a href="#">${i18n.tr("CSS")}</a></li>
-							      <li><a href="#">${i18n.tr("JS")}</a></li>
-							    </ul>
-							  </div>
+						  	<div class='py-2'>
+						  		<select class='standard-select' value.bind="selectedAmount">
+							  		<option model.bind="null">${i18n.tr(amount)}</option>
+							  		<option repeat.for="amount of amounts">${i18n.tr(amount+1)}</option>
+							  	</select>
+						  	</div>
 						  </div>
 						  <div class="col-md-4">
-							  <div class="dropdown py-2">
-							    <button class="btn-classic btn dropdown-toggle full-width" type="button" data-toggle="dropdown">${i18n.tr("amount")}
-							    <span class="caret"></span></button>
-							    <ul class="dropdown-menu black-text-list">
-							      <li><a href="#">${i18n.tr("html")}</a></li>
-							      <li><a href="#">${i18n.tr("CSS")}</a></li>
-							      <li><a href="#">${i18n.tr("JS")}</a></li>
-							    </ul>
-							  </div>
+						  	<div class='py-2'>
+						  		<select class='standard-select' value.bind="selectedSize">
+							  		<option model.bind="null">${i18n.tr(size)}</option>
+							  		<option repeat.for="size of sizes">${i18n.tr(size)}</option>
+							  	</select>
+						  	</div>
 						  </div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 top-buffer">
-								<button class="btn btn-primary full-width">${i18n.tr("add-to-chart")}</button>
+								<button click.delegate="onChartAdd()" class="btn btn-primary full-width">${i18n.tr("add-to-chart")}</button>
 							</div>
 						</div>
 				</div>

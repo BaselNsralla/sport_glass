@@ -6,6 +6,12 @@ export default class ItemDetails {
 	constructor(I18N) {
     this.i18n = I18N;
 		this.id
+		this.size = 'size'
+		this.amount = 'amount'
+		this.sizes = ['M', 'S', 'L', 'XS', 'XL']
+		this.amounts = 6
+		this.selectedSize = null
+		this.selectedAmount = null
 	}
 
 	created(){
@@ -14,6 +20,11 @@ export default class ItemDetails {
 
 	activate(params) {
 		this.id = params.id
+	}
+
+	onChartAdd() {
+		console.log(this.selectedSize)
+		console.log(this.selectedAmount)
 	}
 
 	getItemWithId(id) {
