@@ -6,10 +6,12 @@
 		</div>
 		<div class='col-md-5'>
 				<div class="row">
-					<div class="col-md-12 direction-column give-me-shadow border-radius padding">
-						<span class="details-category-text">${i18n.tr(details.category)}</span>
-						<span class="font-weight-bold details-product-text">${i18n.tr(details.title)}</span>
-						<span class="font-weight-light">${i18n.tr(details.price)}</span>
+					<div class="col-md-12">
+						<div class="direction-column give-me-shadow border-radius padding">
+							<span class="details-category-text">${i18n.tr(details.category)}</span>
+							<span class="details-product-text">${i18n.tr(details.title)}</span>
+							<span class="font-weight-light">${i18n.tr(details.price)}</span>
+						</div>
 					</div>
 					<hr class="horizon-classic" size="30">
 					<div class="col-md-12">
@@ -33,7 +35,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12 top-buffer">
-								<button click.delegate="onChartAdd()" class="btn btn-primary full-width">${i18n.tr("add-to-chart")}</button>
+								<button click.delegate="onChartAdd()" class="py-3 btn btn-primary full-width font-notcool">${i18n.tr("add-to-chart")}</button>
 							</div>
 						</div>
 				</div>
