@@ -1,9 +1,19 @@
 <template>
 	<compose view="../header.html"></compose>
+	<require from="../vertical-image-list/vertical-image-list"></require>
 	<div class='row top-buffer'>
 		<div class='col-md-7'>
 			<div  class="big-image"> 
-				<img class='give-me-shadow product-details-image' src=${details.images[2]} >
+				<div class="col-md-12">
+							<img class='give-me-shadow product-details-image' src=${details.images[2]} >
+				</div>
+		
+				 <div class="col-md-12">
+	 					<compose view="../vertical-image-list/vertical-image-list.html"
+										 view-model = "../vertical-image-list/vertical-image-list"
+										 model.bind= "id"
+						 ></compose>
+				 </div>
 			</div>
 		</div>
 		<div class='col-md-5'>
@@ -18,15 +28,7 @@
 					<hr class="horizon-classic" size="30">
 					<div class="col-md-12">
 						<div class="row">
-						  <div class="col-md-8">
-						  	<div class='py-2'>
-						  		<select class='standard-select' value.bind="selectedAmount">
-							  		<option model.bind="null">${i18n.tr(amount)}</option>
-							  		<option repeat.for="amount of amounts">${i18n.tr(amount+1)}</option>
-							  	</select>
-						  	</div>
-						  </div>
-						  <div class="col-md-4">
+							<div class="col-md-8">
 						  	<div class='py-2'>
 						  		<select class='standard-select' value.bind="selectedSize">
 							  		<option model.bind="null">${i18n.tr(size)}</option>
@@ -34,10 +36,18 @@
 							  	</select>
 						  	</div>
 						  </div>
+						  <div class="col-md-4">
+						  	<div class='py-2'>
+						  		<select class='standard-select' value.bind="selectedAmount">
+							  		<option repeat.for="amount of amounts">${i18n.tr(amount+1)}</option>
+							  	</select>
+						  	</div>
+						  </div>
 						</div>
 						<div class="row">
 							<div class="col-md-12 top-buffer">
-								<button click.delegate="onChartAdd()" class="py-3 btn btn-primary full-width font-notcool">${i18n.tr("add-to-chart")}</button>
+								<button click.delegate="onChartAdd()" class="light-angle-transform py-3 btn btn-primary full-width font-notcool">${i18n.tr("add-to-chart")}</button>
+								<button click.delegate="onChartAdd()" class="mt-3 light-angle-transform py-3 btn btn-success full-width font-notcool">${i18n.tr("buy")}</button>
 							</div>
 						</div>
 				</div>

@@ -1,17 +1,23 @@
-import {Inject} from 'aurelia-framework'
+import {inject, bindable} from 'aurelia-framework'
 import {I18N} from 'aurelia-i18n';
 import webAPI from '../../tools/webAPI'
 
 @inject(I18N, webAPI)
-class VerticalImageList {
-	constructor(I18N) {
-		this.i18n = i18
+export class VerticalImageList {
+	@bindable currentImage
+
+	currentImageChanged(newCurrentImage){
+		this.currentImage = newCurrentImage
+	}
+
+	constructor(I18N, webAPI) {
+		this.i18n = I18N
 		this.webAPI = webAPI
 		this.imageList = []
 	}
 
-	acrivate(id) {
-		this.imageList = this.webAPI.getImagesFor(id)
+	activate(id) {
+		this.webAPI.getImagesFor(id).then((data) => this.imageList = data)
 	}
 
 }

@@ -11,7 +11,7 @@ export default class ItemDetails {
 		this.sizes = ['M', 'S', 'L', 'XS', 'XL']
 		this.amounts = 6
 		this.selectedSize = null
-		this.selectedAmount = null
+		this.selectedAmount = 1
 	}
 
 	created(){

@@ -56,6 +56,11 @@
   font-family: 'Russo One', sans-serif;
   letter-spacing: 1.5px;
 }
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none !important;
+}
 /* ------- END UTIL CLASSES ------*/
 
 
@@ -69,6 +74,22 @@ select {
 }
 
 /*------ RED ZONE --- */
+
+
+
+/*------ ANIMATION --- */
+
+.light-angle-transform {
+  transition: transform 0.1s ease-in-out !important
+}
+.light-angle-transform:hover {
+   transform: rotateZ(1deg) !important
+
+}
+
+
+
+/*------- END ANIMATION----*/
 
 
 .horizon-classic {
@@ -270,7 +291,19 @@ li > a:hover {
   border-radius: 5px
 }
 
+.vertical-list-image {
+  height: 75px;
+  padding: 5px;
+  border-radius: 5px
+}
 
+.vertical-image-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
 
 
 
